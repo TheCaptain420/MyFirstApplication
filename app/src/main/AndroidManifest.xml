@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".CalendarToChangeDate" />
         <activity android:name=".ActivityToCheckCurrentDate" />
-        <activity android:name=".Acti_theChangedDay"></activity>
+        <activity android:name=".Acti_theChangedDay" />
+        <activity android:name=".WritingTheName"></activity>
     </application>
 
 </manifest>
