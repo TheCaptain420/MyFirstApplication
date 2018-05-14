@@ -41,8 +41,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Til edittext
+        final EditText editText =(EditText) findViewById(R.id.editText);
+
+        //Til Hent navn ting ting
         Button button2 = findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                String s = editText.getText().toString();
+                //getbase er standart
+                Intent intentHent = new Intent(getBaseContext(),WritingTheName.class);
+                intentHent.putExtra("HENT_NAVNET",s);
+                startActivity(intentHent);
+
+
+            }
+        });
+        /*
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
               //closes the activity
               //finish();
             }
-        });
+        });*/
 
 
     }

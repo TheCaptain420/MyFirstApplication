@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 public class WritingTheName extends AppCompatActivity {
 
     @Override
@@ -15,8 +17,21 @@ public class WritingTheName extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_writing_the_name);
 
+        TextView textView = findViewById(R.id.textView3);
+        String s = getIntent().getStringExtra("HENT_NAVNET");
+        textView.setText(s);
+
+
     }
 
+
+
+
+
+
+
+
+/*
     public void onClick(View view){
         TextView textView = findViewById(R.id.textView3);
         //til at hente
@@ -32,5 +47,5 @@ public class WritingTheName extends AppCompatActivity {
                 Log.d("hello","Hello World");
             }
         }
-    }
+    }*/
 }
